@@ -12,7 +12,7 @@ export default () => {
     const timeoutId = setTimeout(() => {
       if (numInput.length > 0) {
         const int = parseInt(numInput)
-        if (int !== NaN && int > 0 && int < 84) {
+        if (int > 0 && int < 84) {
           setNum(int)
         } else {
           alert('Must search for a character between 1 & 83')
@@ -42,10 +42,10 @@ export default () => {
       <p>Star Wars Character</p>
       <button onClick={handlePrev}>prev</button>
       <button onClick={handleNext}>next</button>
-      <CharacterComponent num={num} />
       <div>
         <input ref={inputRef} value={numInput} onChange={handleInput} />
       </div>
+      <CharacterComponent num={num} />
     </div>
   </>);
 }

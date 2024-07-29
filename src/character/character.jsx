@@ -23,6 +23,7 @@ export default function CharacterComponent({ num }) {
   }, [num])
 
   return (<>
+    <h1>Character</h1>
     <pre>
         {JSON.stringify(data, null, 1)}
     </pre>
